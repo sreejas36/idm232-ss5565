@@ -225,6 +225,11 @@ header nav a {
     }
 }
 
+@media (max-width: 768px) {
+    .recipes-content {
+        grid-template-columns: 1fr; /* Stacks into one column on smaller screens */
+    }
+}
 
 /* Recipe HTML Page */
 
@@ -257,7 +262,7 @@ header nav a {
     margin-right: 20%;
 }
 
-.recipe-info img{
+.hero-and-info img{
     width: 100%;
     border-radius: 10%;
     height: auto;
@@ -283,4 +288,60 @@ header nav a {
 
 .side-info {
     margin-top: 5%;
+}
+
+.ingredients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.ing-image{
+    width: 40%;
+    border-radius: 10%;
+    height: auto;
+    padding: 5%;
+}
+
+
+
+.recipe-instructions {
+    display: grid; /* Use grid layout to manage the steps */
+    gap: 20px; /* Space between each step */
+    margin: 20px 0; /* Margin above and below the section */
+}
+
+.steps {
+    display: flex; /* Use flexbox for each step */
+    align-items: flex-start; /* Align items at the start */
+    border: 1px solid #ddd; /* Optional: border around each step */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px; /* Padding inside each step */
+    background-color: #fff; /* White background for each step */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    margin: 0 60px;
+}
+
+.steps img {
+    width: 50%; /* Set width for step images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between the image and text */
+}
+
+.text-content {
+    display: flex; /* Allow h3 and p to stack vertically */
+    flex-direction: column; /* Stack h3 and p vertically */
+    margin-top: 5%;
+}
+
+@media (max-width: 600px) {
+    .steps {
+        flex-direction: column; /* Stack image above text for smaller screens */
+        align-items: center; /* Center align for smaller screens */
+    }
+
+    .steps img {
+        margin-right: 0; /* Remove right margin on smaller screens */
+        margin-bottom: 10px; /* Space below the image */
+    }
 }
