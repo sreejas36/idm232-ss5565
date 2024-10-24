@@ -12,17 +12,20 @@
 <body>
     <header>
         <a href="index.html">
-            <img src="assets/frying-pan-logo.png" alt="Website Logo" style="width:150px; height:auto;" class="logo">
+            <img src="assets/frying-pan-logo.png" alt="Website Logo" style="width:100px; height:auto;" class="logo">
         </a>          
         <h1>Sizzle and Spice</h1>
         <nav>
             <a href="help.html">About</a>
             <a href="recipe.html">Recipes</a>
-            <a href="search.html">No results</a>
+            <a href="search.html">No Results</a>
             <a href="filter"></a>
-        </nav>
+        </nav id="nav-menu">
+        <button id="hamburger">
+            <img src="assets/hamburger-menu.png" alt="Menu" style="width: 30px; height: 30px;">
+        </button>
     </header>
-    <h1>Sizzle & Spice</h1>
+    <h1>Enter a World of Flavors.</h1>
     <h3>Filter</h3>
     <h4>Protein</h4>
     <button>Chicken</button>
@@ -59,8 +62,11 @@
             <div class="recipe-card">
                 <img src="IDM232-assets/images/Recipe_Thai_Curry_Chicken_with_Carrots_Bok_Choy/Thai-Curry-Chicken-hi-res.jpg" 
                 alt="Thai-Curry-Chicken">
-                <h3>Thai Curry Chicken</h3>
-                <h4>with Carrots & Bok Choy</h4>
+                <div class="recipe-card-title">
+                    <h3>Thai Curry Chicken</h3>
+                    <h4>with Carrots & Bok Choy</h4>
+                </div>
+                
             </div>
             <!-- <div class="recipe-card">
                 <img src="assets/main-image.png" alt="placeholder-image">
@@ -79,5 +85,7 @@
     <footer>
         Ⓒ Sreeja Satish 2024
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>

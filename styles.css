@@ -39,6 +39,7 @@
     --rice: #FAFAFA;
     --charcoal: #2D2D2D;
     --pepper: #000000;
+    --aloo: #FFF6E0;
 }
 
 /* Header or Website Framework */
@@ -47,14 +48,15 @@
 /* Recipe Cards */
 
 body {
-    background-color: var(--rice);
+    background-color: var(--aloo);
+
 }
 
 h1, h2, h3{
     font-family: "Inria Serif";
 }
 
-h4, p, button {
+h4, h5, p, button {
     font-family: "Montserrat";
     font-weight: 400;
     /* font-family: "Roboto"; */
@@ -94,6 +96,14 @@ h4, p, button {
     /* if wanting border, make width 95% and padding 5px */
 }
 
+.recipe-card h3{
+    font-size: 700;
+}
+
+.recipe-card-title {
+    line-height: 5px;
+}
+
 .card-image img{
     width: 300px;
     height: auto;
@@ -108,4 +118,169 @@ button {
     /* display: flex;
     align-items: center;
     justify-content: center; */
+}
+
+
+header {
+    color: var(--pepper);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+nav {
+    font-family: "Inria";
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+}
+
+
+header a {
+    text-decoration: none; 
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 700;
+    color: var(--pepper);
+}
+
+header nav {
+    display: flex;
+    gap: 20px; /* Space between each link */
+    margin-left: auto;
+}
+
+header nav a:hover {
+    color: var(--chili);
+}
+
+header nav a {
+    padding: 5px 10px;
+    transition: color 0.2s ease;
+}
+
+
+#hamburger {
+    background-color: var(--aloo);
+    border-style: none;
+    color: var(--rice);
+    border-color: var(--rice);
+    border-radius: 20px;
+    padding: 3%;
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+#nav-menu {
+    display: flex;
+    gap: 20px;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 100px; /* Set a max-height to restrict when open */
+}
+
+#nav-menu.collapsed {
+    max-height: 0; /* Collapse the menu */
+}
+
+/* Media Queries */
+
+/* Mobile view */
+@media (max-width: 768px) {
+    #hamburger {
+        display: block;
+    }
+
+    #nav-menu {
+        flex-direction: column; /* Stack links vertically */
+        max-height: 0; /* Start collapsed */
+    /* #nav-menu {
+        display: none; /* Hide regular nav links on mobile */
+        /* flex-direction: column; /* Stack links vertically */
+        /* position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    }
+
+    #nav-menu.show {
+      display: flex; /* Show menu when active */
+    }
+
+    nav a {
+        padding: 10px 20px;
+    }
+}
+
+
+/* Recipe HTML Page */
+
+.recipe-info {
+    /* background-color: var(--rice); */
+    margin: 50px 100px;
+}
+
+/* Can I make these IDs or should I just keep these as Classes? */
+
+.title {
+    font-size: 36px;
+    margin-top: none;
+}
+
+.subtitle {
+    font-size: 24px;
+}
+
+.cuisine, .protein {
+    border: 2px solid var(--pepper);
+    padding: 10px;
+    margin: 15px 5px;
+    border-radius: 25px;
+    display: inline-block;
+    justify-self: center;
+}
+
+.description {
+
+}
+
+.recipe-info img{
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    display: grid;
+    /* justify-content: flex-end; */
+    padding: 5%;
+    /* margin: 0 32px 32px; */
+}
+
+
+.hero-and-info {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+}
+
+.extra-info {
+    display: flex;
+    padding: 10px;
+    margin: 15px 5px;
+    justify-content: space-between;
+}
+
+.side-info {
+    margin-top: 5%;
 }
