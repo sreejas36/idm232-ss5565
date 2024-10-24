@@ -446,7 +446,6 @@ nav {
 
 
 .back-button {
-    /* display: inline-block; */
     background-color: var(--rice); 
     color: var(--chili); 
     border: 2px solid #930808; 
@@ -459,6 +458,7 @@ nav {
     justify-content: center;
     width: max-content;
 }
+
 
 .back-button:hover {
     background-color: var(--chili);
