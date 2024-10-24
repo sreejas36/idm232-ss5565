@@ -16,6 +16,7 @@
 
 body {
     background-color: var(--aloo);
+    margin: 0%;
 }
 
 h1, h2, h3{
@@ -94,9 +95,16 @@ h4, h5, p, button {
 
 .filter {
     display: flex;
-    max-width: fit-content;
-    padding: 10%;
-    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.filter-buttons {
+    display: flex;
+    /* max-width: fit-content; */
+    padding: 5px;
+    justify-content: center;
 }
 
 .recipes{
@@ -186,7 +194,8 @@ header {
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    margin: 20 20 20 0;
+    margin: 30 50 0 50;
+    padding: 3%;
 }
 
 nav {
@@ -226,7 +235,36 @@ header nav a {
     padding: 5px 10px;
     transition: color 0.2s ease;
 }
+nav {
+    position: relative; /* Positioning for absolute children */
+}
 
+#hamburger {
+    display: none; /* Hide by default */
+}
+
+.menu-items {
+    display: none; /* Hide menu items by default */
+    position: absolute; /* Positioning for sliding effect */
+    top: 50px; /* Adjust based on your layout */
+    left: 0;
+    background-color: var(--aloo); /* Background color for the menu */
+    padding: 10px;
+    border-radius: 0 0 10px 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition */
+    transform: translateY(-20px); /* Start slightly above */
+}
+
+.menu-items.active {
+    display: block; /* Show the menu items when active */
+    transform: translateY(0); /* Slide down into view */
+}
+
+@media (max-width: 768px) {
+    #hamburger {
+        display: block; /* Show on smaller screens */
+    }
+}
 
 #hamburger {
     background-color: var(--aloo);
@@ -352,7 +390,7 @@ header nav a {
 
 .ingredients {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
 }
 
@@ -425,4 +463,11 @@ header nav a {
 .back-button:hover {
     background-color: var(--chili);
     color: var(--rice);
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+    align-items: center;
 }
