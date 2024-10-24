@@ -1,0 +1,111 @@
+/* Fonts */
+.inria-serif-light {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.inria-serif-regular {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.inria-serif-bold {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.inria-serif-light-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+.inria-serif-regular-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.inria-serif-bold-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* Colors */
+:root {
+    --chili:#930808;
+    --turmeric: #EFAB00;
+    --saffron: #D06501;
+    --rice: #FAFAFA;
+    --charcoal: #2D2D2D;
+    --pepper: #000000;
+}
+
+/* Header or Website Framework */
+
+
+/* Recipe Cards */
+
+body {
+    background-color: var(--rice);
+}
+
+h1, h2, h3{
+    font-family: "Inria Serif";
+}
+
+h4, p, button {
+    font-family: "Montserrat";
+    font-weight: 400;
+    /* font-family: "Roboto"; */
+    /* font-family: "Raleway"; */
+}
+
+.recipe.row{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    margin: 0 10px;
+}
+.recipe-card{
+    border: 2px;
+    color: var(--rice);
+    font-family: "Inria";
+    background-color: var(--turmeric);
+    border-color: var(--chili);
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    display: grid;
+    justify-items: center;
+    margin: 
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    flex-wrap: wrap;*/
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    padding: 0px;
+    /* if wanting border, make width 95% and padding 5px */
+}
+
+.card-image img{
+    width: 300px;
+    height: auto;
+}
+
+button {
+    background-color: var(--chili);
+    color: var(--rice);
+    border-color: var(--rice);
+    border-radius: 20px;
+    padding: 3%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
