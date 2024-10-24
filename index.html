@@ -16,25 +16,33 @@
         </a>          
         <h1>Sizzle & Spice</h1>
         <nav>
-            <a href="help.html">About</a>
+            <a href="about.html">About</a>
             <a href="recipe.html">Recipes</a>
-            <a href="search.html">No Results</a>
-            <a href="filter"></a>
         </nav id="nav-menu">
         <button id="hamburger">
             <img src="assets/hamburger-menu.png" alt="Menu" style="width: 30px; height: 30px;">
         </button>
     </header>
-    <h1>Enter a World of Flavors.</h1>
-    <h3>Filter</h3>
-    <h4>Protein</h4>
-    <button>Chicken</button>
-    <button>Vegetarian</button>
-    <button>Beef</button>
-    <button>Seafood</button>
-    <button>Pork</button>
-    <button>Turkey</button>
-    <button>Steak</button>
+    <h1 class="tagline">Enter a World of Flavors.</h1>
+    <div class="search">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="What flavors will you explore today?" />
+            <button onclick="performSearch()">Search</button>
+        </div>
+        <p id="error-message" style="display: none;">No results found for your search.</p>
+    </div>
+
+
+    <div class="filter">
+        <!-- <h3>Filter</h3> -->
+        <button>Chicken</button>
+        <button>Vegetarian</button>
+        <button>Beef</button>
+        <button>Seafood</button>
+        <button>Pork</button>
+        <button>Turkey</button>
+        <button>Steak</button>
+    </div>
     <h4></h4>
     
 <!-- 
@@ -66,8 +74,72 @@
                     <h3>Thai Curry Chicken</h3>
                     <h4>with Carrots & Bok Choy</h4>
                 </div>
-                
             </div>
+            <div class="recipe-card">
+                <img src="assets/Thai-Curry-Chicken-hi-res.jpg" 
+                alt="Thai-Curry-Chicken">
+                <div class="recipe-card-title">
+                    <h3>Thai Curry Chicken</h3>
+                    <h4>with Carrots & Bok Choy</h4>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="assets/Thai-Curry-Chicken-hi-res.jpg" 
+                alt="Thai-Curry-Chicken">
+                <div class="recipe-card-title">
+                    <h3>Thai Curry Chicken</h3>
+                    <h4>with Carrots & Bok Choy</h4>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="assets/Thai-Curry-Chicken-hi-res.jpg" 
+                alt="Thai-Curry-Chicken">
+                <div class="recipe-card-title">
+                    <h3>Thai Curry Chicken</h3>
+                    <h4>with Carrots & Bok Choy</h4>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="assets/Thai-Curry-Chicken-hi-res.jpg" 
+                alt="Thai-Curry-Chicken">
+                <div class="recipe-card-title">
+                    <h3>Thai Curry Chicken</h3>
+                    <h4>with Carrots & Bok Choy</h4>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="assets/Thai-Curry-Chicken-hi-res.jpg" 
+                alt="Thai-Curry-Chicken">
+                <div class="recipe-card-title">
+                    <h3>Thai Curry Chicken</h3>
+                    <h4>with Carrots & Bok Choy</h4>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="assets/Thai-Curry-Chicken-hi-res.jpg" 
+                alt="Thai-Curry-Chicken">
+                <div class="recipe-card-title">
+                    <h3>Thai Curry Chicken</h3>
+                    <h4>with Carrots & Bok Choy</h4>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="assets/Thai-Curry-Chicken-hi-res.jpg" 
+                alt="Thai-Curry-Chicken">
+                <div class="recipe-card-title">
+                    <h3>Thai Curry Chicken</h3>
+                    <h4>with Carrots & Bok Choy</h4>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="assets/Thai-Curry-Chicken-hi-res.jpg" 
+                alt="Thai-Curry-Chicken">
+                <div class="recipe-card-title">
+                    <h3>Thai Curry Chicken</h3>
+                    <h4>with Carrots & Bok Choy</h4>
+                </div>
+            </div>
+            
             <!-- <div class="recipe-card">
                 <img src="assets/main-image.png" alt="placeholder-image">
                 <h3>Recipe Title</h3>
@@ -83,9 +155,9 @@
 
 
     <footer>
-        Ⓒ Sreeja Satish 2024
+        <h3>Ⓒ Sreeja Satish 2024</h3>
     </footer>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 
 </body>
 </html>
