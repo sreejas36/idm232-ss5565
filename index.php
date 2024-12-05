@@ -60,7 +60,6 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
             <img src="assets/frying-pan-logo.png" alt="Website Logo" style="width:100px; height:auto;" class="logo">
         </a>          
         <h1>Sizzle & Spice</h1>
-
         <nav>
             <a href="about.php">About</a>
             <a href="recipe.php">Recipes</a>
@@ -72,11 +71,53 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
     <h1 class="tagline">Enter a World of Flavors.</h1>
     <div class="search">
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="What flavors will you explore today?" />
-            <button onclick="performSearch()">Search</button>
+            <!-- Search Form -->
+            <form action="index.php" method="get" class="search-form">
+                <input type="text" name="search" placeholder="What flavors will you explore today?" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+                <button type="submit">Search</button>
+            </form>
         </div>
-        <p id="error-message" style="display: none;">No results found for your search.</p>
     </div>
+
+        <!-- Filter Buttons -->
+    <div class="filter-button">
+        <form action="index.php" method="get">
+            <input type="hidden" name="filter" value="Chicken">
+            <button type="submit">Chicken</button>
+        </form>
+        <form action="index.php" method="get">
+            <input type="hidden" name="filter" value="Fish">
+            <button type="submit">Fish</button>
+        </form>
+        <form action="index.php" method="get">
+            <input type="hidden" name="filter" value="Beef">
+            <button type="submit">Beef</button>
+        </form>
+        <form action="index.php" method="get">
+            <input type="hidden" name="filter" value="Turkey">
+            <button type="submit">Turkey</button>
+        </form>
+        <form action="index.php" method="get">
+            <input type="hidden" name="filter" value="Pork">
+            <button type="submit">Pork</button>
+        </form>
+        <form action="index.php" method="get">
+            <input type="hidden" name="filter" value="Vegetarian">
+            <button type="submit">Vegetarian</button>
+        </form>
+
+            <!-- Reset Button -->
+        <form action="index.php" method="get">
+        <button type="submit" class="reset-button">Reset Filters</button>
+        </form>
+    </div>
+            <!-- <p id="error-message" style="display: none;">Sorry, we didn't find any results for your search.</p> -->
+
+
+
+
+
+
 
 
 <div class="hero">
@@ -138,7 +179,7 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
     <?php foreach ($recipes as $recipe): ?>
         <div class="recipe-card">
             <!-- Recipe Image -->
-            <a href="detail.php?id=<?php echo $recipe['id']; ?>" class="recipe-link">
+            <a href="recipe.php?id=<?php echo $recipe['id']; ?>" class="recipe-link">
                 <img src="pics/pics/<?php echo ($recipe['main_image']); ?>" alt="Recipe Image" class="recipe-image">
                 <h2 class="recipe-title"><?php echo ($recipe['title']); ?></h2>
                 <h3 class="recipe-subtitle"><?php echo ($recipe['subtitle']); ?></h3>

@@ -19,9 +19,9 @@ body {
     margin: 0%;
 }
 
-.main-container {
+/* .main-container {
     
-}
+} */
 
 
 h1, h2, h3{
@@ -210,6 +210,8 @@ nav {
     align-items: baseline;
     justify-content: flex-end;
     gap: 20px;
+    font-size: 40px;
+    position: relative; /* Positioning for absolute children */
 }
 
 header h1 {
@@ -239,9 +241,6 @@ header nav a:hover {
 header nav a {
     padding: 5px 10px;
     transition: color 0.2s ease;
-}
-nav {
-    position: relative; /* Positioning for absolute children */
 }
 
 #hamburger {
@@ -290,7 +289,7 @@ nav {
     gap: 20px;
     transition: max-height 0.3s ease-in-out;
     overflow: hidden;
-    max-height: 100px; /* Set a max-height to restrict when open */
+    /* max-height: 100px; Set a max-height to restrict when open */
 }
 
 #nav-menu.collapsed {
