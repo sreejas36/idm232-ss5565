@@ -42,16 +42,16 @@ if (!$recipe) {
 <body>
 <header>
         <a href="index.php" class="home">
-            <img src="assets/frying-pan-logo.png" alt="Website Logo" style="width:100px; height:auto;" class="logo">
+            <img src="assets/frying-pan-logo.webp" alt="Website Logo" style="width:100px; height:auto;" class="logo">
             <h1>Sizzle & Spice</h1>
         </a>  
         <nav>
             <a href="about.php">About</a>
             <!-- <a href="recipe.php">Recipes</a> -->
         </nav id="nav-menu">
-        <button id="hamburger">
+        <!-- <button id="hamburger">
             <img src="assets/hamburger-menu.png" alt="Menu" style="width: 30px; height: 30px;">
-        </button>
+        </button> -->
 </header>
 
 
@@ -72,19 +72,19 @@ if (!$recipe) {
                     <div class="extra-info">
                         <div class="cook-time">
                             <div class="icon">
-                                <img src="/assets/cook-time.png" alt="cook-time">
+                                <img src="/assets/cook-time.webp" alt="cook-time">
                             </div>
                             <h4><?php echo $recipe['cook_time']; ?></h4>
                         </div>
                         <div class="serving-size">
                             <div class="icon">
-                                <img src="/assets/serving-size.png" alt="serving-size">
+                                <img src="/assets/serving-size.webp" alt="serving-size">
                             </div>
                             <h4><?php echo $recipe['serving_size']; ?></h4>
                         </div>
                         <div class="calories">
                             <div class="icon">
-                                <img src="/assets/calories.png" alt="calories">
+                                <img src="/assets/calories.webp" alt="calories">
                             </div>
                             <h4><?php echo $recipe['calories']; ?></h4>
                         </div>
@@ -101,7 +101,7 @@ if (!$recipe) {
                 <div class="ingredient-separation">
                     <img src="pics/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredients Laid Out" class="ingredients">
                     <div class="ingredient-list">
-                        <h2>Ingredients</h2>
+                        <h1>Ingredients</h1>
                         <ul>
                             <?php
                             $ingredients = explode('*', $recipe['ingredients']);
@@ -118,8 +118,8 @@ if (!$recipe) {
 
         <!-- Steps List -->
         <section class="recipe-instructions">
-            <h2>Steps</h2>
-            <div class="steps">
+            <h1>Steps</h1>
+            <div class="steps-container">
                 <?php
                 $steps = explode('*', $recipe['steps']);
                 $images = explode('*', $recipe['steps_image']);
@@ -127,23 +127,33 @@ if (!$recipe) {
                 foreach ($steps as $index => $step) {
                     $stepParts = explode('^^', $step);
 
+                    // Create a wrapper div for each step
+                    echo '<div class="step-wrapper">';
+
                     // Display the step image if available
                     if (isset($images[$index])) {
-                    // Ensure that the image URL is valid
-                    echo '<img src="pics/' . $images[$index] . '" alt="Step ' . ($index + 1) . ' Image" class="step-image">';
+                        // Ensure that the image URL is valid
+                        echo '<img src="pics/' . $images[$index] . '" alt="Step ' . ($index + 1) . ' Image" class="step-image">';
                     }
 
+                    // Display the step details
                     if (count($stepParts) == 2) {
-                        echo '<div class="step">';
+                        echo '<div class="steps">';
                         // Show the number and then the step
-                        echo '<strong>' . ($index + 1) . '. ' . trim($stepParts[0]) . ':</strong> ';
+                        echo '<h2>' . ($index + 1) . '. ' . trim($stepParts[0]) . ':</h2> ';
                         echo '<p>' . trim($stepParts[1]) . '</p>';
                         echo '</div>';
                     }
+
+                    // Close the wrapper div
+                    echo '</div>';
                 }
                 ?>
             </div>
         </section>
+
 </div>
+
+<footer class="footer">© 2024 Sizzle & Spice</footer>
 </body>
 </html>

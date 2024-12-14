@@ -22,32 +22,33 @@ require_once 'includes/database.php';
 
 <header>
         <a href="index.php" class="home">
-            <img src="assets/frying-pan-logo.png" alt="Website Logo" style="width:100px; height:auto;" class="logo">
+            <img src="assets/frying-pan-logo.webp" alt="Website Logo" style="width:100px; height:auto;" class="logo">
             <h1>Sizzle & Spice</h1>
         </a>  
         <nav>
             <a href="about.php">About</a>
             <!-- <a href="recipe.php">Recipes</a> -->
         </nav id="nav-menu">
-        <button id="hamburger">
+        <!-- <button id="hamburger">
             <img src="assets/hamburger-menu.png" alt="Menu" style="width: 30px; height: 30px;">
-        </button>
+        </button> -->
 </header>
 
 
 
-<div class="about">
-    <h1>Welcome to this Recipe Site.</h1>
-    <h4>This is a project for IDM 232: Scripting for Interactive Digital Media II.</h4>
-    <h3>To Use This Site:</h3>
-    <p>Click the Skillet Icon to go to the Homepage and view the display of recipes.</p>
-    <p>Utilize the search bar to find specific recipes.</p>
-    <p>Take a look at the filters, in case you have a protein preference or any dietary restrictions.</p>
-    <p>Once you find a recipe you like, click on the card to view more information!</p>
-    <p>This will display general information about the dish, as well as the ingredients and steps necessary to create it.</p>
-    <h2>Have fun, and happy cooking!</h2>
-    <a href="case-study.php" class="case-study-button">Case Study</a>
-</div>
+    <div class="about">
+        <h1>Welcome to this Recipe Site.</h1>
+        <h4>This is a project for IDM 232: Scripting for Interactive Digital Media II.</h4>
+        <h3>To Use This Site:</h3>
+        <p>Click the Skillet Icon to go to the Homepage and view the display of recipes.</p>
+        <p>Utilize the search bar to find specific recipes.</p>
+        <p>Take a look at the filters, in case you have a protein preference or any dietary restrictions.</p>
+        <p>Once you find a recipe you like, click on the card to view more information!</p>
+        <p>This will display general information about the dish, as well as the ingredients and steps necessary to create it.</p>
+        <h2>Have fun, and happy cooking!</h2>
+        <a href="case-study.php" class="case-study-button">Case Study</a>
+        <img src="assets/vibing.png" alt="happy gal" class="vibes">
+    </div>
 
 
 
@@ -55,5 +56,7 @@ require_once 'includes/database.php';
     <!-- <div class="tagline"> -->
 
     </div>
+    <footer class="footer">© 2024 Sizzle & Spice</footer>
+
 </body>
 </html>

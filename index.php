@@ -46,6 +46,7 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sizzle & Spice</title>
+    <link rel="shortcut icon" type="image/png" href="assets/frying-pan-logo.webp">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,16 +57,16 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
 
 <header>
         <a href="index.php" class="home">
-            <img src="assets/frying-pan-logo.png" alt="Website Logo" style="width:100px; height:auto;" class="logo">
+            <img src="assets/frying-pan-logo.webp" alt="Website Logo" style="width:100px; height:auto;" class="logo">
             <h1>Sizzle & Spice</h1>
         </a>    
         <nav>
             <a href="about.php">About</a>
             <!-- <a href="recipe.php">Recipes</a> -->
-        </nav id="nav-menu">
+        <!-- </nav id="nav-menu">
         <button id="hamburger">
             <img src="assets/hamburger-menu.png" alt="Menu" style="width: 30px; height: 30px;">
-        </button>
+        </button> -->
 </header>
 
 <section class="invitation">
@@ -132,20 +133,20 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                     <div class="card-details">
                         <div class="details-horizontal">
                             <div class="icon">
-                                <img src="/assets/cook-time.png" alt="cook-time">
+                                <img src="/assets/cook-time.webp" alt="cook-time">
                             </div>
                             <p><?php echo $recipe['cook_time']; ?></p>
                         </div>
                         <!-- <hr> -->
                         <div class="details-horizontal">
                             <div class="icon">
-                                <img src="/assets/serving-size.png" alt="serving-size">
+                                <img src="/assets/serving-size.webp" alt="serving-size">
                             </div>
                             <p><?php echo $recipe['serving_size']; ?></p>
                         </div>
                         <div class="details-horizontal">
                             <div class="icon">
-                                <img src="/assets/calories.png" alt="calories">
+                                <img src="/assets/calories.webp" alt="calories">
                             </div>
                             <p><?php echo $recipe['calories']; ?></p>
                         </div>
@@ -163,5 +164,8 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
         <p class="error-message">Sorry, we didn't find any results for "<?php echo htmlspecialchars($search); ?>"</p>
     <?php endif; ?>
     </div>
+
+    <footer class="footer">© 2024 Sizzle & Spice</footer>
+
 </body>
 </html>
