@@ -142,7 +142,10 @@ require_once 'includes/database.php';
         <section class="case-study-section">
             <h2>The Results</h2>
             <p>
-                This project was a very intriguing journey, giving me valuable experience in utilizing PHP and database integration to create a functional website. I appreciate my progress and how far I've come, and I think I would take this project a step further by integrating a dynamic selection of recipes or a testimonial page, where people's reviews of a dish will cycle through below the main information of the dish. 
+                This project was a very intriguing journey, giving me valuable experience in utilizing PHP and database integration to create a functional website. Though I faced some challenges with PHP and working through file transfer, I was able to learn from each step and get more comfortable with my mistakes. As a result, I am more comfortable working with this and can take this wherever I go!
+            </p>
+            <p>
+                I appreciate my progress and how far I've come, and I think I would take this project a step further by integrating a dynamic selection of recipes or a testimonial page, where people's reviews of a dish will cycle through below the main information of the dish. 
             </p>
             <p>
                 I'm looking forward to potentially utilizing PHP to make workflows more efficient in other fields.

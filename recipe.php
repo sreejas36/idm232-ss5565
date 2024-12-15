@@ -72,19 +72,19 @@ if (!$recipe) {
                     <div class="extra-info">
                         <div class="cook-time">
                             <div class="icon">
-                                <img src="/assets/cook-time.webp" alt="cook-time">
+                                <img src="assets/cook-time.webp" alt="cook-time">
                             </div>
                             <h4><?php echo $recipe['cook_time']; ?></h4>
                         </div>
                         <div class="serving-size">
                             <div class="icon">
-                                <img src="/assets/serving-size.webp" alt="serving-size">
+                                <img src="assets/serving-size.webp" alt="serving-size">
                             </div>
                             <h4><?php echo $recipe['serving_size']; ?></h4>
                         </div>
                         <div class="calories">
                             <div class="icon">
-                                <img src="/assets/calories.webp" alt="calories">
+                                <img src="assets/calories.webp" alt="calories">
                             </div>
                             <h4><?php echo $recipe['calories']; ?></h4>
                         </div>

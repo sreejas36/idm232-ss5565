@@ -61,12 +61,9 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
             <h1>Sizzle & Spice</h1>
         </a>    
         <nav>
-            <a href="about.php">About</a>
-            <!-- <a href="recipe.php">Recipes</a> -->
-        <!-- </nav id="nav-menu">
-        <button id="hamburger">
-            <img src="assets/hamburger-menu.png" alt="Menu" style="width: 30px; height: 30px;">
-        </button> -->
+            <div class="about">
+                <a href="about.php">About</a>
+            </div>
 </header>
 
 <section class="invitation">
@@ -133,20 +130,20 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                     <div class="card-details">
                         <div class="details-horizontal">
                             <div class="icon">
-                                <img src="/assets/cook-time.webp" alt="cook-time">
+                                <img src="assets/cook-time.webp" alt="cook-time">
                             </div>
                             <p><?php echo $recipe['cook_time']; ?></p>
                         </div>
                         <!-- <hr> -->
                         <div class="details-horizontal">
                             <div class="icon">
-                                <img src="/assets/serving-size.webp" alt="serving-size">
+                                <img src="assets/serving-size.webp" alt="serving-size">
                             </div>
                             <p><?php echo $recipe['serving_size']; ?></p>
                         </div>
                         <div class="details-horizontal">
                             <div class="icon">
-                                <img src="/assets/calories.webp" alt="calories">
+                                <img src="assets/calories.webp" alt="calories">
                             </div>
                             <p><?php echo $recipe['calories']; ?></p>
                         </div>
@@ -162,6 +159,9 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
 
     <?php else: ?>
         <p class="error-message">Sorry, we didn't find any results for "<?php echo htmlspecialchars($search); ?>"</p>
+        <div>
+            <img src="assets/sorry.png" alt="sorry!" class="sorry">
+        </div>
     <?php endif; ?>
     </div>
 
