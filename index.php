@@ -154,15 +154,18 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
             </div>
         </a>
 
-    <?php endforeach; ?>
-    <?php if (count($recipes) > 0): ?>
+        <div class="error-message">
+            <?php endforeach; ?>
+            <?php if (count($recipes) > 0): ?>
 
-    <?php else: ?>
-        <p class="error-message">Sorry, we didn't find any results for "<?php echo htmlspecialchars($search); ?>"</p>
-        <div>
-            <img src="assets/sorry.png" alt="sorry!" class="sorry">
+            <?php else: ?>
+                <p>Sorry, we didn't find any results for "<?php echo htmlspecialchars($search); ?>"</p>
+                <div>
+                    <img src="assets/sorry.png" alt="sorry!" class="sorry">
+                </div>
+            <?php endif; ?>
         </div>
-    <?php endif; ?>
+    
     </div>
 
     <footer class="footer">© 2024 Sizzle & Spice</footer>

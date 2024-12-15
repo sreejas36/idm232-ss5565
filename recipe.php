@@ -44,14 +44,11 @@ if (!$recipe) {
         <a href="index.php" class="home">
             <img src="assets/frying-pan-logo.webp" alt="Website Logo" style="width:100px; height:auto;" class="logo">
             <h1>Sizzle & Spice</h1>
-        </a>  
+        </a>    
         <nav>
-            <a href="about.php">About</a>
-            <!-- <a href="recipe.php">Recipes</a> -->
-        </nav id="nav-menu">
-        <!-- <button id="hamburger">
-            <img src="assets/hamburger-menu.png" alt="Menu" style="width: 30px; height: 30px;">
-        </button> -->
+            <div class="about">
+                <a href="about.php">About</a>
+            </div>
 </header>
 
 
