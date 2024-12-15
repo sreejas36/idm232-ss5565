@@ -197,6 +197,10 @@ button {
     cursor: pointer;
 }
 
+button:hover{
+    background-color: var(--saffron);
+}
+
 .case-study-button {
     background-color: var(--chili);
     color: var(--rice);
@@ -234,10 +238,10 @@ h4, h5, p, button {
     background-color: var(--turmeric);
     /* border: 5px solid var(--color-dark-orange); */
     width: 350px;
+    height: 585px;
     color: var(--charcoal);
     border-radius: 24px;
     text-align: center;
-    height: 100%;
     transition: box-shadow 0.3s ease, transform 0.3s ease;       
 }
 
